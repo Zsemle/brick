@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer /> renders the component 1`] = `
-<header>
+exports[`the footer component renders the component 1`] = `
+<footer>
   <h1>
     Footer
   </h1>
-</header>
+</footer>
 `;

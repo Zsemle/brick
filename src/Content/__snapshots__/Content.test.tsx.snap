@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the content component renders the component 1`] = `<main />`;
+
+exports[`the content component renders the component with it's children 1`] = `
+<main>
+  <div>
+    test content 1
+  </div>
+  <div>
+    test content 2
+  </div>
+</main>
+`;

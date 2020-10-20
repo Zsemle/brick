@@ -2,9 +2,9 @@ import React, { FunctionComponent } from "react";
 
 const Footer:FunctionComponent = () => {
     return (
-        <header>
+        <footer>
             <h1>Footer</h1>
-        </header>
+        </footer>
     )
 }
 
