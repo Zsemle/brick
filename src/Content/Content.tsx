@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react'
 
 const Content:FunctionComponent = (props) => {
-    return (
-        <main>
-            {props.children}
-        </main>
-    )
+  return (
+    <main>
+      {props.children}
+    </main>
+  )
 }
 
-export default Content;
+export default Content

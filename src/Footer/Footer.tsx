@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react'
 
 const Footer:FunctionComponent = () => {
-    return (
-        <footer>
-            <h1>Footer</h1>
-        </footer>
-    )
+  return (
+    <footer>
+      <h1>Footer</h1>
+    </footer>
+  )
 }
 
-export default Footer;
+export default Footer
