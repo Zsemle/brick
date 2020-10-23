@@ -1,17 +1,22 @@
 import React, { FunctionComponent } from 'react'
 import ResultItem from '../ResultItem/ResultItem'
+import { Experience } from '../types/brick-types'
 
-const Results:FunctionComponent = ():JSX.Element => {
+export interface ResultsProps {
+  experiences: Experience[]
+}
+
+const Results:FunctionComponent<ResultsProps> = ({ experiences }:ResultsProps):JSX.Element => {
   return (
-    <div>
-      <div>Results of the filter page goes here</div>
-      <ResultItem
-        name={'experience'}
-        category={'animals'}
-        description={'description'}
-        price={123456}
-      />
-    </div>
+    <ul>
+      {experiences.map((experience, key) => <ResultItem
+        name={experience.name}
+        description={experience.description}
+        category={experience.category}
+        price={experience.price}
+        key={experience.name + key}
+      />)}
+    </ul>
   )
 }
 

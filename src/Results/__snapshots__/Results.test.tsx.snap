@@ -1,15 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the results component renders the component 1`] = `
-<div>
-  <div>
-    Results of the filter page goes here
-  </div>
+<ul>
   <ResultItem
-    category="animals"
-    description="description"
-    name="experience"
-    price={123456}
+    category="brain games"
+    description="description of the experience"
+    key="test experience 10"
+    name="test experience 1"
+    price={
+      Object {
+        "amount": 234,
+        "currency": "USD",
+      }
+    }
   />
-</div>
+  <ResultItem
+    category="brain games"
+    description="description of the second experience"
+    key="test experience 21"
+    name="test experience 2"
+    price={
+      Object {
+        "amount": 222222,
+        "currency": "GBP",
+      }
+    }
+  />
+</ul>
 `;

@@ -1,14 +1,18 @@
 import { shallow, ShallowWrapper } from 'enzyme'
 import React from 'react'
-import ResultItem, { ResultItemProps } from './ResultItem'
+import ResultItem from './ResultItem'
+import { Experience } from '../types/brick-types'
 
 describe('the result item component', () => {
   it('renders the component', () => {
-    const props:ResultItemProps = {
+    const props:Experience = {
       name: 'test experience',
       description: 'description of the experience',
       category: 'brain games',
-      price: 45667788
+      price: {
+        amount: 234,
+        currency: 'USD'
+      }
     }
 
     const wrapper:ShallowWrapper = shallow(<ResultItem {...props}/>)

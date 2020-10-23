@@ -1,6 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import { Experience } from '../types/brick-types'
 
+const T:any = {
+  name: 'Name:',
+  description: 'Description:',
+  category: 'Category:',
+  price: 'Price:'
+}
+
 const ResultItem:FunctionComponent<Experience> = ({
   name,
   description,
@@ -8,13 +15,12 @@ const ResultItem:FunctionComponent<Experience> = ({
   price
 }:Experience):JSX.Element => {
   return (
-    <div>
-      one item in the results box
-      <p>name: {name}</p>
-      <p>description: {description}</p>
-      <p>category: {category}</p>
-      <p>price: {price.currency}{price.amount}</p>
-    </div>
+    <li>
+      <p>{T.name}{name}</p>
+      <p>{T.description}{description}</p>
+      <p>{T.category}{category}</p>
+      <p>{T.price}{price.currency}{price.amount}</p>
+    </li>
   )
 }
 
