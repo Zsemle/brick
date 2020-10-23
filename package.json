@@ -67,7 +67,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "npx eslint ./src/**/!(*.snap)"
+    "stylelint": "npx stylelint \"**/*.scss\"",
+    "eslint": "npx eslint ./src/**/*.{js,jsx,ts,tsx}",
+    "lint": "npm run stylelint && npm run eslint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -155,6 +157,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-standard": "^4.0.2",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
