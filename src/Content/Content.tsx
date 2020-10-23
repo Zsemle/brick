@@ -1,9 +1,13 @@
 import React, { FunctionComponent } from 'react'
 
-const Content:FunctionComponent = (props) => {
+interface ContentProps {
+  children?: React.ReactNode
+}
+
+const Content:FunctionComponent = ({ children }:ContentProps):JSX.Element => {
   return (
     <main>
-      {props.children}
+      {children}
     </main>
   )
 }

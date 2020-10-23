@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Content from '../Content/Content'
 
-const App:React.FunctionComponent = function () {
+const App:React.FunctionComponent = function ():JSX.Element {
   return (
     <div>
       <Footer/>

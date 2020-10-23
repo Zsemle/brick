@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-const Header:FunctionComponent = () => {
+const Header:FunctionComponent = ():JSX.Element => {
   return (
     <header>
       <h1>Header</h1>

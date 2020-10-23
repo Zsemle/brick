@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-const Footer:FunctionComponent = () => {
+const Footer:FunctionComponent = ():JSX.Element => {
   return (
     <footer>
       <h1>Footer</h1>
