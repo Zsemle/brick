@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the header component renders the component 1`] = `
-<header>
+<header
+  className="header"
+>
   <h1>
     Header
   </h1>

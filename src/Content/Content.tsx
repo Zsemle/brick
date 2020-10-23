@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react'
+import './Content.scss'
 
 interface ContentProps {
   children?: React.ReactNode
@@ -6,7 +7,7 @@ interface ContentProps {
 
 const Content:FunctionComponent = ({ children }:ContentProps):JSX.Element => {
   return (
-    <main>
+    <main className="content">
       {children}
     </main>
   )

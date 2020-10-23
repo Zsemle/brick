@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the content component renders the component 1`] = `<main />`;
+exports[`the content component renders the component 1`] = `
+<main
+  className="content"
+/>
+`;
 
 exports[`the content component renders the component with it's children 1`] = `
-<main>
+<main
+  className="content"
+>
   <div>
     test content 1
   </div>
