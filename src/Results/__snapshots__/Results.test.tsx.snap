@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the results component renders the component 1`] = `
+<div>
+  <div>
+    Results of the filter page goes here
+  </div>
+  <ResultItem
+    category="animals"
+    description="description"
+    name="experience"
+    price={123456}
+  />
+</div>
+`;

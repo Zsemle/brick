@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the result item component renders the component 1`] = `
+<div>
+  one item in the results box
+  <p>
+    name: 
+    test experience
+  </p>
+  <p>
+    description: 
+    description of the experience
+  </p>
+  <p>
+    category: 
+    brain games
+  </p>
+  <p>
+    price: 
+    45667788
+  </p>
+</div>
+`;

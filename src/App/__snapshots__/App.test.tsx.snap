@@ -2,10 +2,10 @@
 
 exports[`<App /> renders the app 1`] = `
 <div>
-  <Footer />
-  <Content>
-    content goes here
-  </Content>
   <Header />
+  <Content>
+    <FilterPage />
+  </Content>
+  <Footer />
 </div>
 `;

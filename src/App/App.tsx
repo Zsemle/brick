@@ -3,15 +3,16 @@ import './App.css'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Content from '../Content/Content'
+import FilterPage from '../FilterPage/FilterPage'
 
 const App:React.FunctionComponent = function ():JSX.Element {
   return (
     <div>
-      <Footer/>
-      <Content>
-        {'content goes here'}
-      </Content>
       <Header/>
+      <Content>
+        <FilterPage/>
+      </Content>
+      <Footer/>
     </div>
   )
 }
