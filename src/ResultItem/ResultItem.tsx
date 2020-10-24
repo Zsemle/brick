@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Experience } from '../types/brick-types'
+import './ResultItem.scss'
 
 const T:any = {
   name: 'Name:',
@@ -15,7 +16,7 @@ const ResultItem:FunctionComponent<Experience> = ({
   price
 }:Experience):JSX.Element => {
   return (
-    <li>
+    <li className="result-item">
       <p>{T.name}{name}</p>
       <p>{T.description}{description}</p>
       <p>{T.category}{category}</p>

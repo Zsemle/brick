@@ -1,6 +1,8 @@
+@import '../style/layout.scss';
+@import '../style/colors.scss';
+
 .footer {
-  max-width: 920px;
-  margin: auto;
-  height: 100px;
-  background-color: palevioletred;
+  padding: $space-small;
+  background-color: $brick-dark-blue;
+  color: $brick-white;
 }

@@ -1,7 +1,30 @@
 @import '../style/colors.scss';
+@import '../style/layout.scss';
+@import '../style/typo.scss';
 
 .header {
-  height: 50px;
   background-color: palegoldenrod;
-  color: $weird-test-color;
+  padding: $space-small;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__logo {
+  height: 3.2rem;
+  width: 4.8rem;
+  background-color: $brick-mint;
+}
+
+.header__title {
+  margin: 0;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  padding-left: $space-small;
+}
+
+.header__main-menu {
+  margin-left: auto;
+  height: 3.2rem;
+  width: 4.8rem;
+  background-color: $brick-mint;
 }

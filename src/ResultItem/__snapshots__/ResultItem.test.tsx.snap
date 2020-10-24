@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the result item component renders the component 1`] = `
-<li>
+<li
+  className="result-item"
+>
   <p>
     Name:
     test experience

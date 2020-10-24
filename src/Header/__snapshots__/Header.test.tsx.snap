@@ -4,8 +4,16 @@ exports[`the header component renders the component 1`] = `
 <header
   className="header"
 >
-  <h1>
-    Header
+  <div
+    className="header__logo"
+  />
+  <h1
+    className="header__title"
+  >
+    Brick experiences
   </h1>
+  <div
+    className="header__main-menu"
+  />
 </header>
 `;

@@ -4,8 +4,8 @@ exports[`the footer component renders the component 1`] = `
 <footer
   className="footer"
 >
-  <h1>
-    Footer
-  </h1>
+  <p>
+    This is the footer of the application
+  </p>
 </footer>
 `;

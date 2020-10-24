@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import ResultItem from '../ResultItem/ResultItem'
 import { Experience } from '../types/brick-types'
+import './Results.scss'
 
 export interface ResultsProps {
   experiences: Experience[]
@@ -8,7 +9,7 @@ export interface ResultsProps {
 
 const Results:FunctionComponent<ResultsProps> = ({ experiences }:ResultsProps):JSX.Element => {
   return (
-    <ul>
+    <ul className="results">
       {experiences.map((experience, key) => <ResultItem
         name={experience.name}
         description={experience.description}
