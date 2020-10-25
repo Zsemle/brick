@@ -38,7 +38,7 @@ type Categories = {
 };
 
 class Filter extends React.Component<FilterProps, FilterState> {
-  constructor (props:any) {
+  constructor (props:FilterProps) {
     super(props)
     const maxPrice = Math.max(...this.props.experiences.map(experience => experience.price.amount))
     this.state = {
@@ -47,9 +47,9 @@ class Filter extends React.Component<FilterProps, FilterState> {
       filterPriceMin: 0,
       filterPriceMax: maxPrice,
       filterCategories: [],
-      categoriesByText: [],
-      categoriesByPrice: [],
-      categoriesByCategory: [],
+      categoriesByText: this.props.experiences,
+      categoriesByPrice: this.props.experiences,
+      categoriesByCategory: this.props.experiences,
       applyTextFilter: false,
       applyPriceFilter: false,
       applyCategoryFilter: false
@@ -66,8 +66,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     e.persist()
     this.setState(
       {
-        filterText: (e.target as HTMLInputElement).value,
-        applyTextFilter: (e.target as HTMLInputElement).value.length > 0
+        filterText: (e.target as HTMLInputElement).value
       },
       this.filterByText
     )
@@ -144,7 +143,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
       (experience) => filterCategories.includes(experience.category)
     )
     this.setState({
-      categoriesByCategory: result
+      categoriesByCategory: filterCategories.length > 0 ? result : experiences
     }, this.compoundFilters)
   }
 
@@ -154,13 +153,16 @@ class Filter extends React.Component<FilterProps, FilterState> {
     const result = experiences.filter(
       (experience) => experience.name.toLowerCase().includes(filterText.toLowerCase())
     )
+    const applyTextFilter:boolean = filterText.length > 0
     this.setState({
-      categoriesByText: result
+      categoriesByText: result,
+      applyTextFilter: applyTextFilter
     }, this.compoundFilters)
   }
 
   private compoundFilters ():void {
     const {
+      experiences,
       updateExperiences,
       filterCleared
     } = this.props
@@ -172,28 +174,15 @@ class Filter extends React.Component<FilterProps, FilterState> {
       applyPriceFilter,
       applyCategoryFilter
     } = this.state
-    let result:Experience[] = []
-    if (applyTextFilter && !applyPriceFilter && !applyCategoryFilter) {
+    let result:Experience[] = experiences
+    if (applyTextFilter) {
       result = categoriesByText
     }
-    if (!applyTextFilter && applyPriceFilter && !applyCategoryFilter) {
-      result = categoriesByPrice
+    if (applyPriceFilter) {
+      result = result.filter(experience => categoriesByPrice.includes(experience))
     }
-    if (!applyTextFilter && !applyPriceFilter && applyCategoryFilter) {
-      result = categoriesByCategory
-    }
-    if (applyTextFilter && applyPriceFilter && !applyCategoryFilter) {
-      result = categoriesByText.filter(experience => categoriesByPrice.includes(experience))
-    }
-    if (applyTextFilter && !applyPriceFilter && applyCategoryFilter) {
-      result = categoriesByText.filter(experience => categoriesByCategory.includes(experience))
-    }
-    if (!applyTextFilter && applyPriceFilter && applyCategoryFilter) {
-      result = categoriesByPrice.filter(experience => categoriesByCategory.includes(experience))
-    }
-    if (applyTextFilter && applyPriceFilter && applyCategoryFilter) {
-      const firstIntersection:Experience[] = categoriesByText.filter(experience => categoriesByPrice.includes(experience))
-      result = firstIntersection.filter(experience => categoriesByCategory.includes(experience))
+    if (applyCategoryFilter) {
+      result = result.filter(experience => categoriesByCategory.includes(experience))
     }
     if (!applyTextFilter && !applyPriceFilter && !applyCategoryFilter) {
       filterCleared()
@@ -202,7 +191,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     updateExperiences(result)
   }
 
-  render () {
+  render ():JSX.Element {
     return (
       <div>
         <button>{T.filterToggleText}</button>
