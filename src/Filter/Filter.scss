@@ -1,0 +1,32 @@
+@import '../style/typo.scss';
+@import '../style/layout.scss';
+
+.filter__toggle-button {
+  display: block;
+  width: 100%;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  padding: $space-small;
+  cursor: pointer;
+  text-align: left;
+}
+
+.filter__content {
+  margin: $space-small 0;
+}
+
+.filter__check-category {
+  display: block;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+}
+
+.filter__text-label,
+.filter__text-input {
+  display: block;
+  width: 100%;
+}
+
+.filter__price-field {
+  display: flex;
+}

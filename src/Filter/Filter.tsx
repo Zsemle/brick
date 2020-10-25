@@ -1,5 +1,6 @@
 import React, { SyntheticEvent } from 'react'
 import { Experience, ExperienceCategory } from '../types/brick-types'
+import './Filter.scss'
 
 export interface FilterProps{
   experiences: Experience[]
@@ -22,8 +23,12 @@ interface FilterState{
 }
 
 const T:any = {
-  filterToggleText: 'Filter',
-  categoryFilterTitle: 'Filter by category'
+  filterToggleText: 'Toggle Filter',
+  categoryFilterTitle: 'Filter by category',
+  textFilterTitle: 'Search:',
+  priceFilterTitle: 'Filter by Price',
+  minPrice: 'min.',
+  maxPrice: 'max.'
 }
 
 const categories:Categories = {
@@ -194,21 +199,29 @@ class Filter extends React.Component<FilterProps, FilterState> {
   render ():JSX.Element {
     return (
       <div>
-        <button>{T.filterToggleText}</button>
-        <input type="search" value={this.state.filterText} onChange={this.onInputTextChange}/>
-        <fieldset>
-          <legend>{T.categoryFilterTitle}</legend>
-          {Object.keys(categories).map((category, index) => (
-            <label key={`${category}${index}`}>
-              <input type="checkbox" onChange={this.onInputCheckboxChange} value={category}/>
-              <span>{category}</span>
-            </label>
-          )
-          )
-          }
-        </fieldset>
-        <input min="0" type="number" value={this.state.filterPriceMin} onChange={this.onInputPriceMinChange}/>
-        <input min="0" type="number" value={this.state.filterPriceMax} onChange={this.onInputPriceMaxChange}/>
+        <button className="filter__toggle-button">{T.filterToggleText}</button>
+        <div className="filter__content">
+          <label className="filter__text-label" htmlFor="searchField">{T.textFilterTitle}</label>
+          <input className="filter__text-input" id="searchField" type="search" value={this.state.filterText} onChange={this.onInputTextChange}/>
+          <fieldset>
+            <legend>{T.categoryFilterTitle}</legend>
+            {Object.keys(categories).map((category, index) => (
+              <label className="filter__check-category" key={`${category}${index}`}>
+                <input type="checkbox" onChange={this.onInputCheckboxChange} value={category}/>
+                <span>{category}</span>
+              </label>
+            )
+            )
+            }
+          </fieldset>
+          <fieldset className="filter__price-field">
+            <legend>{T.priceFilterTitle}</legend>
+            <label className="filter__text-label" htmlFor="minPrice">{T.minPrice}</label>
+            <input className="filter__text-input" id="minPrice" min="0" type="number" value={this.state.filterPriceMin} onChange={this.onInputPriceMinChange}/>
+            <label className="filter__text-label" htmlFor="maxPrice">{T.maxPrice}</label>
+            <input className="filter__text-input" id="maxPrice" min="0" type="number" value={this.state.filterPriceMax} onChange={this.onInputPriceMaxChange}/>
+          </fieldset>
+        </div>
       </div>
     )
   }

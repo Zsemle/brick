@@ -2,66 +2,106 @@
 
 exports[`the filter component renders the component 1`] = `
 <div>
-  <button>
-    Filter
+  <button
+    className="filter__toggle-button"
+  >
+    Toggle Filter
   </button>
-  <input
-    onChange={[Function]}
-    type="search"
-    value=""
-  />
-  <fieldset>
-    <legend>
-      Filter by category
-    </legend>
+  <div
+    className="filter__content"
+  >
     <label
-      key="animals0"
+      className="filter__text-label"
+      htmlFor="searchField"
     >
-      <input
-        onChange={[Function]}
-        type="checkbox"
-        value="animals"
-      />
-      <span>
-        animals
-      </span>
+      Search:
     </label>
-    <label
-      key="sports1"
+    <input
+      className="filter__text-input"
+      id="searchField"
+      onChange={[Function]}
+      type="search"
+      value=""
+    />
+    <fieldset>
+      <legend>
+        Filter by category
+      </legend>
+      <label
+        className="filter__check-category"
+        key="animals0"
+      >
+        <input
+          onChange={[Function]}
+          type="checkbox"
+          value="animals"
+        />
+        <span>
+          animals
+        </span>
+      </label>
+      <label
+        className="filter__check-category"
+        key="sports1"
+      >
+        <input
+          onChange={[Function]}
+          type="checkbox"
+          value="sports"
+        />
+        <span>
+          sports
+        </span>
+      </label>
+      <label
+        className="filter__check-category"
+        key="brain games2"
+      >
+        <input
+          onChange={[Function]}
+          type="checkbox"
+          value="brain games"
+        />
+        <span>
+          brain games
+        </span>
+      </label>
+    </fieldset>
+    <fieldset
+      className="filter__price-field"
     >
+      <legend>
+        Filter by Price
+      </legend>
+      <label
+        className="filter__text-label"
+        htmlFor="minPrice"
+      >
+        min.
+      </label>
       <input
+        className="filter__text-input"
+        id="minPrice"
+        min="0"
         onChange={[Function]}
-        type="checkbox"
-        value="sports"
+        type="number"
+        value={0}
       />
-      <span>
-        sports
-      </span>
-    </label>
-    <label
-      key="brain games2"
-    >
+      <label
+        className="filter__text-label"
+        htmlFor="maxPrice"
+      >
+        max.
+      </label>
       <input
+        className="filter__text-input"
+        id="maxPrice"
+        min="0"
         onChange={[Function]}
-        type="checkbox"
-        value="brain games"
+        type="number"
+        value={246}
       />
-      <span>
-        brain games
-      </span>
-    </label>
-  </fieldset>
-  <input
-    min="0"
-    onChange={[Function]}
-    type="number"
-    value={0}
-  />
-  <input
-    min="0"
-    onChange={[Function]}
-    type="number"
-    value={246}
-  />
+    </fieldset>
+  </div>
 </div>
 `;
