@@ -2,8 +2,48 @@
 
 exports[`the filter component renders the component 1`] = `
 <div>
-  <div>
-    Filter box goes here
-  </div>
+  <button>
+    Filter
+  </button>
+  <input
+    onChange={[Function]}
+    type="search"
+    value=""
+  />
+  <fieldset>
+    <legend>
+      Filter by category
+    </legend>
+    <label
+      key="animals0"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        animals
+      </span>
+    </label>
+    <label
+      key="sports1"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        sports
+      </span>
+    </label>
+    <label
+      key="brain games2"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        brain games
+      </span>
+    </label>
+  </fieldset>
 </div>
 `;

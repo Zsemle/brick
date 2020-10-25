@@ -30,3 +30,9 @@ exports[`the results component renders the component 1`] = `
   />
 </ul>
 `;
+
+exports[`the results component renders the component when no experiences are available 1`] = `
+<p>
+  No results match your criteria. Try changing the filter options.
+</p>
+`;

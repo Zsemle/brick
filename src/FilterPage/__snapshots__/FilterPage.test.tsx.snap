@@ -2,7 +2,95 @@
 
 exports[`the filter page component renders the component 1`] = `
 <div>
-  <Filter />
+  <Filter
+    experiences={
+      Array [
+        Object {
+          "category": "animals",
+          "description": "Pet a bunch of fluffy kittens while sipping coffee in Zwolle",
+          "name": "Kitten Petting",
+          "price": Object {
+            "amount": 10,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "brain games",
+          "description": "Experience the daily struggle of suburban commuters! Car not included",
+          "name": "Traffic Jam in Rotterdam",
+          "price": Object {
+            "amount": 42,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "sports",
+          "description": "Experience the everyday life of a 16th century Dutch farmer, living on the countryside of Zeeland. Activities include digging a hole in the mud, and peeling potatoes.",
+          "name": "An afternoon as a Peasant",
+          "price": Object {
+            "amount": 64,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "sports",
+          "description": "Join the millions of native dutchies in their most popular activity!. Rental bike included - no helmet.",
+          "name": "Cycling in Amersfoort",
+          "price": Object {
+            "amount": 30,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "brain games",
+          "description": "Spend an hour trying to pronounce the Dutch G without sounding like a Belgian, or worse.",
+          "name": "Language Coaching",
+          "price": Object {
+            "amount": 12,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "animals",
+          "description": "Come to Den Bosch to experience the dream came true.",
+          "name": "Go Shopping on a Horse",
+          "price": Object {
+            "amount": 246,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "brain games",
+          "description": "Take a seat on the beach at Zandvoort, to experience this historic moment. Chair included.",
+          "name": "Watch the Brexit",
+          "price": Object {
+            "amount": 20,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "sports",
+          "description": "Have you ever wanted to be seen as a real weird person? Sign up now for this activity!",
+          "name": "Swimming in The Rijn at Utrecht",
+          "price": Object {
+            "amount": 15,
+            "currency": "EUR",
+          },
+        },
+        Object {
+          "category": "brain games",
+          "description": "Authentic 20th century post-apocalyptic style escape room, and a night full of activities!",
+          "name": "Escape Groeningen",
+          "price": Object {
+            "amount": 45,
+            "currency": "EUR",
+          },
+        },
+      ]
+    }
+    filterCleared={[Function]}
+    updateExperiences={[Function]}
+  />
   <Results
     experiences={
       Array [

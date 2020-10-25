@@ -7,18 +7,25 @@ export interface ResultsProps {
   experiences: Experience[]
 }
 
+const T:any = {
+  noResults: 'No results match your criteria. Try changing the filter options.'
+}
+
 const Results:FunctionComponent<ResultsProps> = ({ experiences }:ResultsProps):JSX.Element => {
-  return (
-    <ul className="results">
-      {experiences.map((experience, key) => <ResultItem
-        name={experience.name}
-        description={experience.description}
-        category={experience.category}
-        price={experience.price}
-        key={experience.name + key}
-      />)}
-    </ul>
-  )
+  if (experiences.length > 0) {
+    return (
+      <ul className="results">
+        {experiences.map((experience, key) => <ResultItem
+          name={experience.name}
+          description={experience.description}
+          category={experience.category}
+          price={experience.price}
+          key={experience.name + key}
+        />)}
+      </ul>
+    )
+  }
+  return <p>{T.noResults}</p>
 }
 
 export default Results
