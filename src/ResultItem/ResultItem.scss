@@ -1,6 +1,26 @@
 @import '../style/layout.scss';
+@import '../style/typo.scss';
 
 .result-item {
   border: 1px solid black;
   margin-bottom: $space-small;
+  padding: $space-small;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
+
+.result-item__title {
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  margin: 0 0 $space-small 0;
+}
+
+.result-item__price {
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  margin: 0 0 $space-small 0;
+}
+
+.result-item__paragraph {
+  margin: 0 0 $space-small 0;
 }

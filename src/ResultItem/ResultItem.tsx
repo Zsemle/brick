@@ -17,10 +17,10 @@ const ResultItem:FunctionComponent<Experience> = ({
 }:Experience):JSX.Element => {
   return (
     <li className="result-item">
-      <p>{T.name}{name}</p>
-      <p>{T.description}{description}</p>
-      <p>{T.category}{category}</p>
-      <p>{T.price}{price.currency}{price.amount}</p>
+      <h3 className="result-item__title">{name}</h3>
+      <p className="result-item__paragraph">{description}</p>
+      <p className="result-item__paragraph">{`${T.category} ${category}`}</p>
+      <p className="result-item__price">{`${T.price} ${price.currency} ${price.amount}`}</p>
     </li>
   )
 }

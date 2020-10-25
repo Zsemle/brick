@@ -4,22 +4,25 @@ exports[`the result item component renders the component 1`] = `
 <li
   className="result-item"
 >
-  <p>
-    Name:
+  <h3
+    className="result-item__title"
+  >
     test experience
-  </p>
-  <p>
-    Description:
+  </h3>
+  <p
+    className="result-item__paragraph"
+  >
     description of the experience
   </p>
-  <p>
-    Category:
-    brain games
+  <p
+    className="result-item__paragraph"
+  >
+    Category: brain games
   </p>
-  <p>
-    Price:
-    USD
-    234
+  <p
+    className="result-item__price"
+  >
+    Price: USD 234
   </p>
 </li>
 `;
