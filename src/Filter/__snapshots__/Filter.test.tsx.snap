@@ -18,7 +18,9 @@ exports[`the filter component renders the component 1`] = `
       key="animals0"
     >
       <input
+        onChange={[Function]}
         type="checkbox"
+        value="animals"
       />
       <span>
         animals
@@ -28,7 +30,9 @@ exports[`the filter component renders the component 1`] = `
       key="sports1"
     >
       <input
+        onChange={[Function]}
         type="checkbox"
+        value="sports"
       />
       <span>
         sports
@@ -38,12 +42,26 @@ exports[`the filter component renders the component 1`] = `
       key="brain games2"
     >
       <input
+        onChange={[Function]}
         type="checkbox"
+        value="brain games"
       />
       <span>
         brain games
       </span>
     </label>
   </fieldset>
+  <input
+    min="0"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    min="0"
+    onChange={[Function]}
+    type="number"
+    value={246}
+  />
 </div>
 `;
