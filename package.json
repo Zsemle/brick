@@ -145,10 +145,12 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/enzyme": "^3.10.7",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "classnames": "^2.2.6",
     "enzyme-to-json": "^3.6.1",
     "eslint": "^7.11.0",
     "eslint-config-standard": "^15.0.0",

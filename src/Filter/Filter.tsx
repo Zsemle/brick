@@ -1,6 +1,7 @@
 import React, { SyntheticEvent } from 'react'
 import { Experience, ExperienceCategory } from '../types/brick-types'
 import './Filter.scss'
+import classNames from 'classnames'
 
 export interface FilterProps{
   experiences: Experience[]
@@ -65,6 +66,11 @@ class Filter extends React.Component<FilterProps, FilterState> {
     this.onInputPriceMinChange = this.onInputPriceMinChange.bind(this)
     this.onInputPriceMaxChange = this.onInputPriceMaxChange.bind(this)
     this.compoundFilters = this.compoundFilters.bind(this)
+    this.toggleFilterContent = this.toggleFilterContent.bind(this)
+  }
+
+  private toggleFilterContent ():void {
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }))
   }
 
   private onInputTextChange (e:SyntheticEvent):void{
@@ -197,10 +203,12 @@ class Filter extends React.Component<FilterProps, FilterState> {
   }
 
   render ():JSX.Element {
+    const { isOpen } = this.state
+    const filterContentClasses:string = classNames('filter__content', { 'filter__content--visible': isOpen })
     return (
       <div>
-        <button className="filter__toggle-button">{T.filterToggleText}</button>
-        <div className="filter__content">
+        <button className="filter__toggle-button" onClick={this.toggleFilterContent}>{T.filterToggleText}</button>
+        <div className={filterContentClasses}>
           <label className="filter__text-label" htmlFor="searchField">{T.textFilterTitle}</label>
           <input className="filter__text-input" id="searchField" type="search" value={this.state.filterText} onChange={this.onInputTextChange}/>
           <fieldset>

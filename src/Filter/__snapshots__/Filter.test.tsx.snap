@@ -4,6 +4,7 @@ exports[`the filter component renders the component 1`] = `
 <div>
   <button
     className="filter__toggle-button"
+    onClick={[Function]}
   >
     Toggle Filter
   </button>

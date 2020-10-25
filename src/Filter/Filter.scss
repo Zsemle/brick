@@ -12,7 +12,12 @@
 }
 
 .filter__content {
+  display: none;
   margin: $space-small 0;
+}
+
+.filter__content--visible {
+  display: block;
 }
 
 .filter__check-category {
