@@ -7,6 +7,10 @@
   padding: $space-small;
   font-size: $font-size-small;
   line-height: $line-height-small;
+
+  @media (min-width: $bp-medium) {
+    margin: 0;
+  }
 }
 
 .result-item__title {

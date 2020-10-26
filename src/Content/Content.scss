@@ -2,4 +2,9 @@
 
 .content {
   padding: $space-small;
+
+  @media (min-width: $bp-medium) {
+    padding: 1.6rem 0 5rem 0;
+    min-height: calc(100vh - 18rem);
+  }
 }

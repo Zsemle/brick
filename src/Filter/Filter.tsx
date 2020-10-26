@@ -206,7 +206,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     const { isOpen } = this.state
     const filterContentClasses:string = classNames('filter__content', { 'filter__content--visible': isOpen })
     return (
-      <div>
+      <div className="filter">
         <button className="filter__toggle-button" onClick={this.toggleFilterContent}>{T.filterToggleText}</button>
         <div className={filterContentClasses}>
           <label className="filter__text-label" htmlFor="searchField">{T.textFilterTitle}</label>

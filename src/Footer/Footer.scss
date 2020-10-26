@@ -5,4 +5,9 @@
   padding: $space-small;
   background-color: $brick-dark-blue;
   color: $brick-white;
+
+  @media (min-width: $bp-medium) {
+    max-width: 920px;
+    margin: auto;
+  }
 }

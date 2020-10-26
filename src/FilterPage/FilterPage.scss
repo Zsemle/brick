@@ -1,0 +1,9 @@
+@import '../style/layout.scss';
+
+.filter-page {
+  @media (min-width: $bp-medium) {
+    display: flex;
+    max-width: 920px;
+    margin: auto;
+  }
+}

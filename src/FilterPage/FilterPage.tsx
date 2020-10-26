@@ -3,6 +3,7 @@ import Filter from '../Filter/Filter'
 import Results from '../Results/Results'
 import experiences from '../mocks/experiences'
 import { Experience } from '../types/brick-types'
+import './FilterPage.scss'
 
 interface FilterPageState{
   filteredExperiences: Experience[]
@@ -39,7 +40,7 @@ class FilterPage extends React.Component<{}, FilterPageState> {
     } = this
 
     return (
-      <div>
+      <div className="filter-page">
         <Filter
           experiences={experiences}
           updateExperiences={updateFilteredExperiences}

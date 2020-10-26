@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the filter component renders the component 1`] = `
-<div>
+<div
+  className="filter"
+>
   <button
     className="filter__toggle-button"
     onClick={[Function]}

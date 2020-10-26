@@ -1,6 +1,14 @@
 @import '../style/typo.scss';
 @import '../style/layout.scss';
 
+.filter {
+  @media (min-width: $bp-medium) {
+    width: 26rem;
+    flex: 0 0 26rem;
+    margin-right: $space-small;
+  }
+}
+
 .filter__toggle-button {
   display: block;
   width: 100%;
@@ -9,11 +17,20 @@
   padding: $space-small;
   cursor: pointer;
   text-align: left;
+
+  @media (min-width: $bp-medium) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .filter__content {
   display: none;
   margin: $space-small 0;
+
+  @media (min-width: $bp-medium) {
+    display: block;
+  }
 }
 
 .filter__content--visible {
