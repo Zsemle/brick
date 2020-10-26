@@ -73,7 +73,7 @@ exports[`the filter page component renders the component 1`] = `
         Object {
           "category": "sports",
           "description": "Have you ever wanted to be seen as a real weird person? Sign up now for this activity!",
-          "name": "Swimming in The Rijn at Utrecht",
+          "name": "Swimming in The Kromme Rijn at Utrecht",
           "price": Object {
             "amount": 15,
             "currency": "EUR",
@@ -162,7 +162,7 @@ exports[`the filter page component renders the component 1`] = `
         Object {
           "category": "sports",
           "description": "Have you ever wanted to be seen as a real weird person? Sign up now for this activity!",
-          "name": "Swimming in The Rijn at Utrecht",
+          "name": "Swimming in The Kromme Rijn at Utrecht",
           "price": Object {
             "amount": 15,
             "currency": "EUR",

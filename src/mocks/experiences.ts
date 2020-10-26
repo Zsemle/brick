@@ -65,7 +65,7 @@ const experiences:Experience[] = [
     }
   },
   {
-    name: 'Swimming in The Rijn at Utrecht',
+    name: 'Swimming in The Kromme Rijn at Utrecht',
     description: 'Have you ever wanted to be seen as a real weird person? Sign up now for this activity!',
     category: 'sports',
     price: {
