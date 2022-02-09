@@ -20,13 +20,13 @@ class FilterPage extends React.Component<{}, FilterPageState> {
     this.resetExperiences = this.resetExperiences.bind(this)
   }
 
-  private updateFilteredExperiences (filteredExperiences:Experience[]):void{
+  private updateFilteredExperiences (filteredExperiences:Experience[]):void {
     this.setState({
       filteredExperiences: filteredExperiences
     })
   }
 
-  private resetExperiences ():void{
+  private resetExperiences ():void {
     this.setState({
       filteredExperiences: experiences
     })

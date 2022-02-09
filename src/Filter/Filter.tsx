@@ -73,7 +73,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     this.setState((prevState) => ({ isOpen: !prevState.isOpen }))
   }
 
-  private onInputTextChange (e:SyntheticEvent):void{
+  private onInputTextChange (e:SyntheticEvent):void {
     e.persist()
     this.setState(
       {
@@ -83,14 +83,14 @@ class Filter extends React.Component<FilterProps, FilterState> {
     )
   }
 
-  private onInputCheckboxChange (e:SyntheticEvent):void{
+  private onInputCheckboxChange (e:SyntheticEvent):void {
     e.persist()
     this.toggleFilterCategory(
       (e.target as HTMLInputElement).value as ExperienceCategory
     )
   }
 
-  private onInputPriceMinChange (e:SyntheticEvent):void{
+  private onInputPriceMinChange (e:SyntheticEvent):void {
     e.persist()
     const newPriceLimit:number = (e.target as HTMLInputElement).value.length > 0 ? parseInt((e.target as HTMLInputElement).value) : 0
     this.setState(
@@ -102,7 +102,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     )
   }
 
-  private onInputPriceMaxChange (e:SyntheticEvent):void{
+  private onInputPriceMaxChange (e:SyntheticEvent):void {
     e.persist()
     const newPriceLimit:number = (e.target as HTMLInputElement).value.length > 0 ? parseInt((e.target as HTMLInputElement).value) : 0
     this.setState(
@@ -114,7 +114,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     )
   }
 
-  private filterByPrice ():void{
+  private filterByPrice ():void {
     const {
       experiences
     } = this.props
@@ -130,7 +130,7 @@ class Filter extends React.Component<FilterProps, FilterState> {
     }, this.compoundFilters)
   }
 
-  private toggleFilterCategory (category:ExperienceCategory):void{
+  private toggleFilterCategory (category:ExperienceCategory):void {
     const { filterCategories } = this.state
     let newFilterCategories:ExperienceCategory[] = [...filterCategories]
     if (newFilterCategories.includes(category)) {
