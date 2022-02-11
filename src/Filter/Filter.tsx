@@ -4,8 +4,8 @@ import './Filter.scss'
 import classNames from 'classnames'
 
 export interface FilterProps{
-  experiences: Experience[]
-  updateExperiences: (experiences:Experience[]) => void
+  experiences: Experience[] | null
+  updateExperiences: (experiences:Experience[] | null) => void
   filterCleared: () => void
 }
 
@@ -18,9 +18,9 @@ interface FilterState{
   filterCategories: ExperienceCategory[]
   filterPriceMin: number
   filterPriceMax: number
-  categoriesByText: Experience[]
-  categoriesByPrice: Experience[]
-  categoriesByCategory: Experience[]
+  categoriesByText: Experience[] | null
+  categoriesByPrice: Experience[] | null
+  categoriesByCategory: Experience[] | null
 }
 
 const T:any = {
@@ -46,7 +46,7 @@ type Categories = {
 class Filter extends React.Component<FilterProps, FilterState> {
   constructor (props:FilterProps) {
     super(props)
-    const maxPrice = Math.max(...this.props.experiences.map(experience => experience.price.amount))
+    const maxPrice = this.props.experiences ? Math.max(...this.props.experiences.map(experience => experience.price.amount)) : 0
     this.state = {
       isOpen: false,
       filterText: '',
@@ -122,9 +122,11 @@ class Filter extends React.Component<FilterProps, FilterState> {
       filterPriceMin,
       filterPriceMax
     } = this.state
-    const filteredCategories:Experience[] = experiences.filter(
-      experience => experience.price.amount >= filterPriceMin && experience.price.amount <= filterPriceMax
-    )
+    const filteredCategories:Experience[] = experiences
+      ? experiences.filter(
+        experience => experience.price.amount >= filterPriceMin && experience.price.amount <= filterPriceMax
+      )
+      : []
     this.setState({
       categoriesByPrice: filteredCategories
     }, this.compoundFilters)
@@ -150,9 +152,11 @@ class Filter extends React.Component<FilterProps, FilterState> {
     const {
       experiences
     } = this.props
-    const result = experiences.filter(
-      (experience) => filterCategories.includes(experience.category)
-    )
+    const result = experiences
+      ? experiences.filter(
+        (experience) => filterCategories.includes(experience.category)
+      )
+      : []
     this.setState({
       categoriesByCategory: filterCategories.length > 0 ? result : experiences
     }, this.compoundFilters)
@@ -161,9 +165,11 @@ class Filter extends React.Component<FilterProps, FilterState> {
   private filterByText ():void {
     const { filterText } = this.state
     const { experiences } = this.props
-    const result = experiences.filter(
-      (experience) => experience.name.toLowerCase().includes(filterText.toLowerCase())
-    )
+    const result = experiences
+      ? experiences.filter(
+        (experience) => experience.name.toLowerCase().includes(filterText.toLowerCase())
+      )
+      : []
     const applyTextFilter:boolean = filterText.length > 0
     this.setState({
       categoriesByText: result,
@@ -185,15 +191,15 @@ class Filter extends React.Component<FilterProps, FilterState> {
       applyPriceFilter,
       applyCategoryFilter
     } = this.state
-    let result:Experience[] = experiences
+    let result:Experience[] | null = experiences
     if (applyTextFilter) {
       result = categoriesByText
     }
     if (applyPriceFilter) {
-      result = result.filter(experience => categoriesByPrice.includes(experience))
+      result = result ? result.filter(experience => categoriesByPrice?.includes(experience)) : []
     }
     if (applyCategoryFilter) {
-      result = result.filter(experience => categoriesByCategory.includes(experience))
+      result = result ? result.filter(experience => categoriesByCategory?.includes(experience)) : []
     }
     if (!applyTextFilter && !applyPriceFilter && !applyCategoryFilter) {
       filterCleared()

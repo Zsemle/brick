@@ -4,7 +4,7 @@ import { Experience } from '../types/brick-types'
 import './Results.scss'
 
 export interface ResultsProps {
-  experiences: Experience[]
+  experiences: Experience[] | null
 }
 
 const T:any = {
@@ -12,10 +12,10 @@ const T:any = {
 }
 
 const Results:FunctionComponent<ResultsProps> = ({ experiences }:ResultsProps):JSX.Element => {
-  if (experiences.length > 0) {
+  if (experiences && experiences.length > 0) {
     return (
       <ul className="results">
-        {experiences.map((experience, key) => <ResultItem
+        {experiences?.map((experience, key) => <ResultItem
           name={experience.name}
           description={experience.description}
           category={experience.category}

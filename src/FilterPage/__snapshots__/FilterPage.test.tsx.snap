@@ -7,7 +7,7 @@ exports[`the filter page component renders the component 1`] = `
   <Filter
     experiences={
       Array [
-        Object {
+        Experience {
           "category": "animals",
           "description": "Pet a bunch of fluffy kittens while sipping coffee in Zwolle",
           "name": "Kitten Petting",
@@ -16,7 +16,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Experience the daily struggle of suburban commuters! Car not included",
           "name": "Traffic Jam in Rotterdam",
@@ -25,7 +25,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Experience the everyday life of a 16th century Dutch farmer, living on the countryside of Zeeland. Activities include digging a hole in the mud, and peeling potatoes.",
           "name": "An afternoon as a Peasant",
@@ -34,7 +34,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Join the millions of native dutchies in their most popular activity!. Rental bike included - no helmet.",
           "name": "Cycling in Amersfoort",
@@ -43,7 +43,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Spend an hour trying to pronounce the Dutch G without sounding like a Belgian, or worse.",
           "name": "Language Coaching",
@@ -52,7 +52,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "animals",
           "description": "Come to Den Bosch to experience the dream came true.",
           "name": "Go Shopping on a Horse",
@@ -61,7 +61,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Take a seat on the beach at Zandvoort, to experience this historic moment. Chair included.",
           "name": "Watch the Brexit",
@@ -70,7 +70,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Have you ever wanted to be seen as a real weird person? Sign up now for this activity!",
           "name": "Swimming in The Kromme Rijn at Utrecht",
@@ -79,7 +79,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Authentic 20th century post-apocalyptic style escape room, and a night full of activities!",
           "name": "Escape Groeningen",
@@ -96,7 +96,7 @@ exports[`the filter page component renders the component 1`] = `
   <Results
     experiences={
       Array [
-        Object {
+        Experience {
           "category": "animals",
           "description": "Pet a bunch of fluffy kittens while sipping coffee in Zwolle",
           "name": "Kitten Petting",
@@ -105,7 +105,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Experience the daily struggle of suburban commuters! Car not included",
           "name": "Traffic Jam in Rotterdam",
@@ -114,7 +114,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Experience the everyday life of a 16th century Dutch farmer, living on the countryside of Zeeland. Activities include digging a hole in the mud, and peeling potatoes.",
           "name": "An afternoon as a Peasant",
@@ -123,7 +123,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Join the millions of native dutchies in their most popular activity!. Rental bike included - no helmet.",
           "name": "Cycling in Amersfoort",
@@ -132,7 +132,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Spend an hour trying to pronounce the Dutch G without sounding like a Belgian, or worse.",
           "name": "Language Coaching",
@@ -141,7 +141,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "animals",
           "description": "Come to Den Bosch to experience the dream came true.",
           "name": "Go Shopping on a Horse",
@@ -150,7 +150,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Take a seat on the beach at Zandvoort, to experience this historic moment. Chair included.",
           "name": "Watch the Brexit",
@@ -159,7 +159,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "sports",
           "description": "Have you ever wanted to be seen as a real weird person? Sign up now for this activity!",
           "name": "Swimming in The Kromme Rijn at Utrecht",
@@ -168,7 +168,7 @@ exports[`the filter page component renders the component 1`] = `
             "currency": "EUR",
           },
         },
-        Object {
+        Experience {
           "category": "brain games",
           "description": "Authentic 20th century post-apocalyptic style escape room, and a night full of activities!",
           "name": "Escape Groeningen",
