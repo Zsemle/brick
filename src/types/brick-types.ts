@@ -5,7 +5,7 @@ interface IPrice {
     currency: string
 }
 
-export class Price {
+class Price {
     amount: number
     currency: string
 
@@ -32,6 +32,6 @@ export class Experience {
       this.name = name
       this.description = description
       this.category = category
-      this.price = price
+      this.price = new Price(price)
     }
 }
