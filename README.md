@@ -1,4 +1,5 @@
-This is a demo project for a job application. If that's what you are looking for, you are at the right place!
+This is a demo project for a job application.
+The story is about a search page where you can check out and filter experiences - that you may purchase in a "real" app.
 
 ## Requirements
 This project was built using node v12.19.0 LTS. It may run on other versions.
