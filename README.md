@@ -1,5 +1,15 @@
-This is a demo project for a job application.
-The story is about a search page where you can check out and filter experiences - that you may purchase in a "real" app.
+# Purpose
+This is a small project that was an assignment for a job interview and might be used later in discussions.
+
+## Story
+A page that lists experiences. You can apply various filters to them.
+
+## Technology
+- React
+- Jest, Enzyme
+- SASS
+- Typescript
+- ESlint, Stylelint
 
 ## Requirements
 This project was built using node v12.19.0 LTS. It may run on other versions.
@@ -8,6 +18,10 @@ This project was built using node v12.19.0 LTS. It may run on other versions.
 Install dependencies with:
 ```bash
 npm ci
+```
+Start API server
+```bash
+npm run api
 ```
 Then start the project with:
 ```bash
